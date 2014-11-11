@@ -16,7 +16,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HUEHEUHEUHEUHEUHEHU</title>
+        <title>SmartToll</title>
     </head>
     <body>
         <form id="form" method="POST" action="Login">

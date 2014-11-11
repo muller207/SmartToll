@@ -6,6 +6,7 @@
 
 package salcam.smarttoll.daoImp;
 
+import salcam.smarttoll.dao.LogReimpressaoDAO;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

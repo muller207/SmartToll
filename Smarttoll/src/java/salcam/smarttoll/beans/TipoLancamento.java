@@ -14,4 +14,12 @@ public class TipoLancamento {
     private int tipoLancamentoCod;
     private String descricao;
     private float valor;    
+
+    public String getDescricao() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public float getValor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
