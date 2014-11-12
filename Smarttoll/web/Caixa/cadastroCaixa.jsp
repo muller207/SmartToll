@@ -3,6 +3,16 @@
     Created on : 07/11/2014, 09:29:10
     Author     : Samuel
 --%>
+<%
+    session = request.getSession(false);
+    try {
+        if (session.getAttribute("usuario") == null || session.getAttribute("usuario").toString().isEmpty()) {
+            response.sendRedirect("../index.jsp");
+        }
+    } catch (Exception e) {
+        response.sendRedirect("../index.jsp");
+    }
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
