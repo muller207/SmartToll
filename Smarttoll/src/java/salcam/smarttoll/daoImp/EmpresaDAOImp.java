@@ -20,32 +20,6 @@ import salcam.smarttoll.conn.Conn;
  */
 public class EmpresaDAOImp implements EmpresaDAO {
     @Override
-    public ResultSet consultaEmpresaTotal(){
-        ResultSet rs = null;
-        try {
-            PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CONSULTA_EMPRESA);
-            rs = stmt.executeQuery();
-        } catch (SQLException ex) {
-            Logger.getLogger(EmpresaDAOImp.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return rs;
-    }
-    
-    @Override
-    public int maxCodigo(){
-        try{
-            PreparedStatement stmt = Conn.getConn().prepareStatement(MAX_CODIGO);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                return rs.getInt("MAX");                
-            }
-            return -1;
-        }catch(Exception e){
-            return -1;
-        }
-    }
-    
-    @Override
     public boolean cadastroEmpresa(Empresa e){
         try{
             PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CADASTRA_EMPRESA);            
@@ -72,4 +46,30 @@ public class EmpresaDAOImp implements EmpresaDAO {
             return false;
         }
     }
+    
+    @Override
+    public int maxCodigo(){
+        try{
+            PreparedStatement stmt = Conn.getConn().prepareStatement(MAX_CODIGO_EMPRESA);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("MAX");                
+            }
+            return -1;
+        }catch(Exception e){
+            return -1;
+        }
+    }
+    
+    @Override
+    public ResultSet consultaEmpresaTotal(){
+        ResultSet rs = null;
+        try {
+            PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CONSULTA_EMPRESA);
+            rs = stmt.executeQuery();
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpresaDAOImp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rs;
+    }  
 }

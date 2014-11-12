@@ -4,13 +4,13 @@
     } catch (Exception e) {
         System.out.println(e.getMessage());
     }
-    response.sendRedirect("");
+    response.sendRedirect("/Smarttoll");
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>HOME</title>
+        <title></title>
     </head>
     <body>
     </body>

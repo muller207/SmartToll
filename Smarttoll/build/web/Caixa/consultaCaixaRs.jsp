@@ -3,6 +3,16 @@
     Created on : 07/11/2014, 13:25:36
     Author     : Administrador
 --%>
+<%
+    session = request.getSession(false);
+    try {
+        if (session.getAttribute("usuario") == null || session.getAttribute("usuario").toString().isEmpty()) {
+            response.sendRedirect("/Smarttoll");
+        }
+    } catch (Exception e) {
+        response.sendRedirect("/Smarttoll");
+    }
+%>
 
 <%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.ResultSet"%>
@@ -10,13 +20,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Consulta de caixas</title>
+        <link rel="stylesheet" href="/Smarttoll/css/style.css">
+        <title>Consulta de Caixas</title>
     </head>
     <body>
-        <div id="wrap">			
+        <div id="wrap">	
+            <jsp:include page="/Estrutura/menu.jsp" />
             <div id="content">
-                <h2>Consulta de caixas</h2>
-                <table>
+                <h1>Consulta de Caixas</h1>
+                <br>
+                <br>
+                <table border="1" cellspacing="0">
                     <tr >
                         <th>Caixa Código</th>
                         <th>Nome da estação de trabalho</th>
@@ -24,7 +38,6 @@
                     </tr>                    
                     <%
                         ResultSet rs = (ResultSet) request.getAttribute("rs");
-                        PrintWriter writer = response.getWriter();
                         if (rs != null) {
                             while (rs.next()) {
                                 String situacao = (rs.getBoolean("SITUACAO")) ? "ATIVO" : "INATIVO";
@@ -43,4 +56,5 @@
             </div>
         </div>		
     </body>
+    <jsp:include page="/Estrutura/footer.jsp" />
 </html>
