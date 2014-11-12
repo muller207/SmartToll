@@ -19,7 +19,7 @@ public interface EmpresaDAO {
                 + " AUTENTICADO, INSCRICAO_MUNICIPAL)"
                 + " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)";
     public final String CONSULTA_EMPRESA="SELECT * FROM Empresas";
-    public final String MAX_CODIGO = "SELECT MAX(EMPRESA_CODIGO) as MAX FROM Empresas";
+    public final String MAX_CODIGO_EMPRESA = "SELECT MAX(EMPRESA_CODIGO) as MAX FROM Empresas";
     boolean cadastroEmpresa(Empresa e);
     ResultSet consultaEmpresaTotal();
     int maxCodigo();

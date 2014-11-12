@@ -94,7 +94,7 @@ public class ConsultaLogLogin extends HttpServlet {
         LogLoginDAO ldao = new LogLoginDAOImp();
         ResultSet rs = ldao.consulta(condicao);
         request.setAttribute("rs", rs);
-        RequestDispatcher rd = request.getRequestDispatcher("/Log/consultaLogAcessoRs.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/Log/Acesso/consultaLogAcessoRs.jsp");
         rd.forward(request, response);
     }
 

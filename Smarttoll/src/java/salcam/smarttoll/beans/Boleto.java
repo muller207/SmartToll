@@ -30,13 +30,13 @@ public class Boleto {
     private Date desconto;
     private Date multa;
     private Date pagamento;
-    private int valorNominal;
-    private int valorAbatimento;
-    private int valorDesconto;
-    private int valorDespesa;
-    private int valorJuros;
-    private int valorMulta;
-    private int valorPago;
+    private float valorNominal;
+    private float valorAbatimento;
+    private float valorDesconto;
+    private float valorDespesa;
+    private float valorJuros;
+    private float valorMulta;
+    private float valorPago;
     private byte origem;
     private boolean boletoImpresso;
     private boolean remessaGerada;
@@ -204,59 +204,59 @@ public class Boleto {
         this.pagamento = pagamento;
     }
 
-    public int getValorNominal() {
+    public float getValorNominal() {
         return valorNominal;
     }
 
-    public void setValorNominal(int valorNominal) {
+    public void setValorNominal(float valorNominal) {
         this.valorNominal = valorNominal;
     }
 
-    public int getValorAbatimento() {
+    public float getValorAbatimento() {
         return valorAbatimento;
     }
 
-    public void setValorAbatimento(int valorAbatimento) {
+    public void setValorAbatimento(float valorAbatimento) {
         this.valorAbatimento = valorAbatimento;
     }
 
-    public int getValorDesconto() {
+    public float getValorDesconto() {
         return valorDesconto;
     }
 
-    public void setValorDesconto(int valorDesconto) {
+    public void setValorDesconto(float valorDesconto) {
         this.valorDesconto = valorDesconto;
     }
 
-    public int getValorDespesa() {
+    public float getValorDespesa() {
         return valorDespesa;
     }
 
-    public void setValorDespesa(int valorDespesa) {
+    public void setValorDespesa(float valorDespesa) {
         this.valorDespesa = valorDespesa;
     }
 
-    public int getValorJuros() {
+    public float getValorJuros() {
         return valorJuros;
     }
 
-    public void setValorJuros(int valorJuros) {
+    public void setValorJuros(float valorJuros) {
         this.valorJuros = valorJuros;
     }
 
-    public int getValorMulta() {
+    public float getValorMulta() {
         return valorMulta;
     }
 
-    public void setValorMulta(int valorMulta) {
+    public void setValorMulta(float valorMulta) {
         this.valorMulta = valorMulta;
     }
 
-    public int getValorPago() {
+    public float getValorPago() {
         return valorPago;
     }
 
-    public void setValorPago(int valorPago) {
+    public void setValorPago(float valorPago) {
         this.valorPago = valorPago;
     }
 

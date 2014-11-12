@@ -6,6 +6,7 @@
 package salcam.smarttoll.servlet;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -48,16 +49,15 @@ public class CadastroCaixa extends HttpServlet {
 
         Caixa c = new Caixa();
         c.setSerial(request.getParameter("serial"));
-        boolean situacao = false;
-        if (request.getParameterValues("situacao") != null) {
-            situacao = true;
-        }
+        boolean situacao = (request.getParameterValues("situacao") != null && 
+                request.getParameter("situacao").equals("1"))?true:false;
 
         c.setSituacao(situacao);
         c.setSemPararPraca(Integer.parseInt(request.getParameter("sempararPraca")));
         c.setSequencialArquivoNela(Integer.parseInt(request.getParameter("sequencialArquivoNela")));
         c.setSequencialArquivoTag(Integer.parseInt(request.getParameter("sequencialArquivoTag")));
-        c.setIp(request.getParameter("ip"));
+        InetAddress ip = InetAddress.getLocalHost();
+        c.setIp(ip.getHostAddress());
         c.setTipo(Integer.parseInt(request.getParameter("tipo")));
 
         CaixaDAO cdao = new CaixaDAOImp();
