@@ -17,9 +17,9 @@ import salcam.smarttoll.conn.Conn;
  *
  * @author Administrador
  */
-public class CaixaMovimentoDAOImp {
+public class CaixaMovimentoDAOImp implements CaixaMovimentoDAO {
     @Override
-    public boolean cadastroBoletoLayout(CaixaMovimento c){
+    public boolean cadastroCaixaMovimento(CaixaMovimento c){
         try{
             PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CADASTRO_CAIXA_MOVIMENTO); 
             stmt.setInt(1, c.getMovimentacao());
@@ -32,9 +32,9 @@ public class CaixaMovimentoDAOImp {
             stmt.setBoolean(8, c.isTransmitido());
             stmt.setDate(9, (Date) c.getDataFechamento());
             stmt.setFloat(10, c.getValorFechamentoOperador());
-            stmt.setInt(11, );
-            stmt.setDate(12, c.getEmpresaCodigo());
-            stmt.setInt(13, null);
+            stmt.setInt(11, c.getTrnSeqReg());
+            stmt.setDate(12, (Date) c.getDataCriacaoTrn());
+            stmt.setInt(13, c.getMotivoTrt());
             stmt.executeUpdate();
             return true;
         }
@@ -42,21 +42,7 @@ public class CaixaMovimentoDAOImp {
             System.out.println(ex.getMessage());
             return false;
         }
-    }
-    
-    @Override
-    public int maxCodigo(){
-        try{
-            PreparedStatement stmt = Conn.getConn().prepareStatement(MAX_CODIGO_CAIXA_MOVIMENTO);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                return rs.getInt("MAX");                
-            }
-            return -1;
-        }catch(Exception e){
-            return -1;
-        }
-    }
+    }    
     
     @Override
     public ResultSet consultaCaixaMovimento(String condicao) {
