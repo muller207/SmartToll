@@ -3,6 +3,16 @@
     Created on : 07/11/2014, 13:25:36
     Author     : Administrador
 --%>
+<%
+    session = request.getSession(false);
+    try {
+        if (session.getAttribute("usuario") == null || session.getAttribute("usuario").toString().isEmpty()) {
+            response.sendRedirect("/Smarttoll");
+        }
+    } catch (Exception e) {
+        response.sendRedirect("/Smarttoll");
+    }
+%>
 
 <%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.ResultSet"%>
@@ -10,13 +20,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Consulta de caixas</title>
+        <link rel="stylesheet" href="/Smarttoll/css/style.css">
+        <title>Consulta de Logs de Acesso</title>
     </head>
     <body>
-        <div id="wrap">			
-            <div id="content">
-                <h2>Consulta de Log de Acesso</h2>
-                <table>
+        <div id="wrap">	
+            <jsp:include page="/Estrutura/menu.jsp" />
+            <div id="content" >
+                <h1>Consulta de Logs de Acesso</h1>
+                <br><br>
+                <table border="1" cellspacing="0">
                     <tr ondblclick="">
                         <th>Codigo</th>
                         <th>Funcionario</th>
@@ -43,10 +56,11 @@
                                 }else{
                                     sucesso = "Logout";
                                 }
+                                String nome = (rs.getString("FUNCIONARIO")==null)?"":rs.getString("FUNCIONARIO");
                     %>
                     <tr>
                         <td><%= rs.getInt("FUNCIONARIO_CODIGO")%></td>
-                        <td><%= rs.getString("FUNCIONARIO")%></td>
+                        <td><%= nome%></td>
                         <td><%= rs.getDate("DATA")%></td>
                         <td><%= sucesso%></td>
                         <td><%= sistema%></td>
@@ -62,4 +76,5 @@
             </div>
         </div>		
     </body>
+    <jsp:include page="/Estrutura/footer.jsp" />
 </html>

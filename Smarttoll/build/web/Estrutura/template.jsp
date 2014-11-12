@@ -19,26 +19,21 @@
 <html>
     <head>
         <link rel="stylesheet" href="/Smarttoll/css/style.css">
-        <title>Cadastro de Banco</title>
+        <title>Titulo da Pagina</title>
     </head>
     <body>
         <div id="wrap">	
             <jsp:include page="/Estrutura/menu.jsp" />
             <div id="content" >
-                <h1>Cadastro de Banco</h1><br>                
-                    <form action="CadastroBanco" method="post">
+                <h1>Titulo da Label</h1><br><br>               
+                    <form action="servlet" method="post">                        
+                        <label>Label</label>
+                        <input type="text" name="serial"><br><br>
                         <br><br>
-                        <label for="codigo">Código</label>
-                        <input type="text" name="codigo"><br><br>
-                        <label for="razao">Razão</label>
-                        <input type="text" name="razao"><br><br>
-                        <label for="fantasia">Fantasia</label>
-                        <input type="text" name="fantasia"><br><br>
-                        <br><br>
-                        <input type="submit" value="Cadastrar">
-                     </form>
+                        <input type="submit" value="Enviar">
+                    </form>
             </div>
-        </div>
+        </div> 
+        <jsp:include page="/Estrutura/footer.jsp" />
     </body>
-    <jsp:include page="/Estrutura/footer.jsp" />
 </html>

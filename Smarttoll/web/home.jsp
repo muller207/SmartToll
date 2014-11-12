@@ -8,21 +8,26 @@
 <%
     session = request.getSession(false);
     try {
-        if (session.getAttribute("usuario").equals("")) {
-            response.sendRedirect("");
+        if (session.getAttribute("usuario") == null || session.getAttribute("usuario").toString().isEmpty()) {
+            response.sendRedirect("/Smarttoll");
         }
     } catch (Exception e) {
-        response.sendRedirect("");
+        response.sendRedirect("/Smarttoll");
     }
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="css/style.css">
-        <title>HOME</title>
+        <link rel="stylesheet" href="/Smarttoll/css/style.css">
+        <title>SmartToll</title>
     </head>
     <body>
-        <jsp:include page="Estrutura/menu.jsp" />        
+        <div id="wrap">            
+            <jsp:include page="/Estrutura/menu.jsp" />
+            <div id="content">
+            </div>
+        </div>        
     </body>
+    <jsp:include page="/Estrutura/footer.jsp" />
 </html>
