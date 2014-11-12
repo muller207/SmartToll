@@ -6,6 +6,7 @@
 
 package salcam.smarttoll.daoImp;
 
+import salcam.smarttoll.dao.ClassificacaoDAO;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
