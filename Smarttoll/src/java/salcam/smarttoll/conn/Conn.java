@@ -18,7 +18,7 @@ public class Conn {
     private static final String URL = "jdbc:jtds:sqlserver://soft01/SmartToll";
     private static final String DRIVER = "net.sourceforge.jtds.jdbc.Driver";
     private static final String USUARIO = "sa";
-    private static final String SENHA = "a75s125";
+    private static final String SENHA = "A75S125";
     
     public static Connection getConn() throws SQLException{
         try{  

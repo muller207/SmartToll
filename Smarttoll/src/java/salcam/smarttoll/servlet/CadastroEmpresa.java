@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import salcam.smarttoll.beans.Empresa;
 import salcam.smarttoll.dao.EmpresaDAO;
 import salcam.smarttoll.daoImp.EmpresaDAOImp;
+import salcam.smarttoll.utils.Alert;
 
 /**
  *
@@ -71,9 +72,9 @@ public class CadastroEmpresa extends HttpServlet {
         }
 
         e.setRazao(request.getParameter("razao"));
-        e.setFantasia(request.getParameter("razao"));
-        e.setCnpj(request.getParameter("razao"));
-        e.setIe(request.getParameter("razao"));
+        e.setFantasia(request.getParameter("nomeFantasia"));
+        e.setCnpj(request.getParameter("cnpj"));
+        e.setIe(request.getParameter("ie"));
 
         e.setObservacao((request.getParameter("obs") != null && !request.getParameter("obs").isEmpty())
                 ? request.getParameter("obs") : "");
@@ -99,11 +100,12 @@ public class CadastroEmpresa extends HttpServlet {
         e.setInscricaoMunicipal((request.getParameter("inscricaoMunicipal") != null && !request.getParameter("inscricaoMunicipal").isEmpty())
                 ? request.getParameter("inscricaoMunicipal") : "");
         
-        EmpresaDAO edao = new EmpresaDAOImp();
-        if(edao.cadastroEmpresa(e))
-            System.out.println("Cadastrou empresa");
-        else
-            System.out.println("Nao cadastrou empresa");
+        EmpresaDAO edao = new EmpresaDAOImp();        
+        if(edao.cadastroEmpresa(e)){
+            Alert.Message(response, "Sucesso ao cadastrar empresa", "/Smarttoll/home");
+        } else {
+            Alert.Message(response, "Falha ao cadastra empresa", "/Smarttoll/home");
+        }
     }
 
     /**

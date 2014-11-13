@@ -10,11 +10,11 @@ package salcam.smarttoll.beans;
  *
  * @author Administrador
  */
-public class ReimpressaoJsutificativa {
+public class ReimpressaoJustificativa {
     private int justificativaCod;
     private String descricao;    
 
-    public ReimpressaoJsutificativa() {
+    public ReimpressaoJustificativa() {
     }
 
     public int getJustificativaCod() {
