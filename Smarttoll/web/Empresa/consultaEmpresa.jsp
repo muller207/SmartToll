@@ -1,7 +1,7 @@
 <%-- 
-    Document   : cadastroEmpresa
-    Created on : 07/11/2014, 13:22:07
-    Author     : Samuel
+    Document   : template.jsp
+    Created on : 12/11/2014, 09:16:33
+    Author     : Administrador
 --%>
 <%
     session = request.getSession(false);
@@ -13,37 +13,38 @@
         response.sendRedirect("/Smarttoll");
     }
 %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="/Smarttoll/css/style.css">
-        <title>Cadastro de Empresa</title>
+        <title>Consulta de Empresas</title>
     </head>
     <body>
         <div id="wrap">	
             <jsp:include page="/Estrutura/menu.jsp" />
             <div id="content" >
-                <h1>Cadastro de Empresa</h1><br>                
-                <form id="form" onsubmit="return false;">
+                <h1>Consulta de Empresas</h1><br><br>               
+                <form id="form" method="POST" action="ConsultaEmpresa">
                     <label for="razao">Razão social</label>
-                    <input type="text" name="razao" id="razao" placeholder="Razão social" required> 
+                    <input type="text" name="razao" id="razao" placeholder="Razão social"> 
                     <br><br>
 
                     <label for="nomeFantasia">Nome fantasia</label>
-                    <input type="" name="nomeFantasia" id="nomeFantasia" placeholder="Nome fantasia" required> 
+                    <input type="" name="nomeFantasia" id="nomeFantasia" placeholder="Nome fantasia"> 
                     <br><br>
 
                     <label for="cnpj">CNPJ</label>
-                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" required> 
+                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ"> 
                     <br><br>
 
                     <label for="ie">IE</label>
-                    <input type="text" name="ie" id="ie" placeholder="Inscrição Estadual" required> 
+                    <input type="text" name="ie" id="ie" placeholder="Inscrição Estadual"> 
                     <br><br>
 
                     <label for="inscricaoMunicipal">IM</label>
-                    <input type="text" name="inscricaoMunicipal" id="inscricaoMunicipal" placeholder="Inscrição Municipal" required> 
+                    <input type="text" name="inscricaoMunicipal" id="inscricaoMunicipal" placeholder="Inscrição Municipal"> 
                     <br><br>
 
                     <label for="email">E-mail</label>
@@ -69,7 +70,12 @@
                             <br><br>
 
                             <label for="autenticado">Autenticado</label>
-                            <input type="checkbox" name="autenticado" id="autenticado" placeholder="Autenticado" value="1" checked> 
+                            <select name="autenticado" id="autenticado">
+                                    <option value="">Não preenchido</option>
+                                    <option value="0">Não</option>
+                                    <option value="1">Sim</option>
+                            </select>
+                            <!--<input type="checkbox" name="autenticado" id="autenticado" placeholder="Autenticado" value="1" checked>--> 
                             <br><br>
                     </fieldset>
                     <br><br>
@@ -79,10 +85,10 @@
                     <br><br>
 
                     <br><br>
-                    <input type="submit" value="Registrar" onclick="submitForm();">
-                </form>
+                    <input type="submit" value="Consultar">
+            </form>
             </div>
-        </div>
+        </div> 
+        <jsp:include page="/Estrutura/footer.jsp" />
     </body>
-    <jsp:include page="/Estrutura/footer.jsp" />
 </html>
