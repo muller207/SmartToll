@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package salcam.smarttoll.daoImp;
+package salcam.smarttoll.dao;
 
 import java.sql.ResultSet;
 import salcam.smarttoll.beans.CaixaMovimento;
