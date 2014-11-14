@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    
     <servlet>
         <servlet-name>cadastroCaixa.jsp</servlet-name>
         <jsp-file>/Caixa/cadastroCaixa.jsp</jsp-file>
@@ -9,6 +8,46 @@
         <servlet-name>consultaCaixa.jsp</servlet-name>
         <jsp-file>/Caixa/consultaCaixa.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>cadastroIsento.jsp</servlet-name>
+        <jsp-file>/Isento/cadastroIsento.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaIsento.jsp</servlet-name>
+        <jsp-file>/Isento/consultaIsento.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>cadastroEstado.jsp</servlet-name>
+        <jsp-file>/Estado/cadastroEstado.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaEstado.jsp</servlet-name>
+        <jsp-file>/Estado/consultaEstado.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaEmpresa.jsp</servlet-name>
+        <jsp-file>/Empresa/consultaEmpresa.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaEmpresa</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaEmpresa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaEstado</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaEstado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroEstado</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastroEstado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaIsento</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaIsento</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroIsento</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastroIsento</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>cadastroCaixa.jsp</servlet-name>
         <url-pattern>/Caixa/Cadastro</url-pattern>
@@ -16,6 +55,26 @@
     <servlet-mapping>
         <servlet-name>consultaCaixa.jsp</servlet-name>
         <url-pattern>/Caixa/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaEmpresa.jsp</servlet-name>
+        <url-pattern>/Empresa/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaEstado.jsp</servlet-name>
+        <url-pattern>/Estado/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cadastroEstado.jsp</servlet-name>
+        <url-pattern>/Estado/Cadastro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaIsento.jsp</servlet-name>
+        <url-pattern>/Isento/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cadastroIsento.jsp</servlet-name>
+        <url-pattern>/Isento/Cadastro</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>cadastroBanco.jsp</servlet-name>
@@ -41,34 +100,30 @@
         <servlet-name>consultaLogAcesso.jsp</servlet-name>
         <url-pattern>/Log/Acesso/Consulta</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>home.jsp</servlet-name>
         <jsp-file>/home.jsp</jsp-file>
-    </servlet>    
+    </servlet>
     <servlet>
         <servlet-name>index.jsp</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
-    </servlet>    
+    </servlet>
     <servlet>
         <servlet-name>logout.jsp</servlet-name>
         <jsp-file>/logout.jsp</jsp-file>
     </servlet>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>home.jsp</servlet-name>
         <url-pattern>/home</url-pattern>
-    </servlet-mapping>    
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>index.jsp</servlet-name>
         <url-pattern>/Smarttoll</url-pattern>
-    </servlet-mapping>  
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>logout.jsp</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
-    
-    
-        
     <servlet>
         <servlet-name>CadastroCaixa</servlet-name>
         <servlet-class>salcam.smarttoll.servlet.CadastroCaixa</servlet-class>
@@ -125,7 +180,26 @@
         <servlet-name>ConsultaLogLogin</servlet-name>
         <url-pattern>/Log/Acesso/ConsultaLogLogin</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>ConsultaEmpresa</servlet-name>
+        <url-pattern>/Empresa/ConsultaEmpresa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaEstado</servlet-name>
+        <url-pattern>/Estado/ConsultaEstado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroEstado</servlet-name>
+        <url-pattern>/Estado/CadastroEstado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaIsento</servlet-name>
+        <url-pattern>/Isento/ConsultaIsento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroIsento</servlet-name>
+        <url-pattern>/Isento/CadastroIsento</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -6,41 +6,41 @@
                 </li>
 	
 		<li class='active has-sub'>
-		 	<a>Sistema</a>
-		   	<ul>
-		   	  	<li class='has-sub'><a>Configurações</a>
-		   	        <ul>
-		   	         	<li><a href="#">Parametros do Sistema</a></li>
-		   	        </ul>
-		   	   </li>
-		   	   <li><a href="/Smarttoll/logout">Sair</a></li>
+                    <a>Sistema</a>
+                    <ul>
+                        <li class='has-sub'><a>Configurações</a>
+                            <ul>
+                                <li><a href="#">Parametros do Sistema</a></li>
+                            </ul>
+                       </li>
+                        <li><a href="/Smarttoll/logout">Sair</a></li>
 		   </ul>
 		</li> 
   
     	<li class='active has-sub'>
-	  		<a>Cadastros</a>
-	   		<ul>
-		   	   	<li class='has-sub'><a>Balcão</a>
-		   	      	<ul>
-		   	          	<li><a href="/Smarttoll/Caixa/Cadastro">Cadastro</a></li>
-		   	          	<li><a href="/Smarttoll/Caixa/Consulta">Consulta</a></li>	
-		   	      	</ul>
-		   	   	</li>
-		   	   
-		   	   	<li class='has-sub'><a>Empresa</a>
-		   	       	<ul>
-		   	          	<li><a href="/Smarttoll/Empresa/Cadastro">Cadastro</a></li>	
-			   	    	<li><a href="/Smarttoll/Empresa/consultaEmpresa.jsp">Consulta</a></li>
-		   	      	</ul>
-		   	   	</li>
-		   	   
-		   	   	<li class='has-sub'><a>Funcionários</a>
-		   	       	<ul>
-			   	    	<li><a href="/Smarttoll/Funcionario/cadastroFuncionario.jsp">Cadastro</a></li>
-		   	          	<li><a href="/Smarttoll/Funcionario/consultaFuncionario.jsp">Consulta</a></li>	
-		   	      	</ul>
-		   	   	</li>
-	   	   	</ul>
+                <a>Cadastros</a>
+                    <ul>
+                        <li class='has-sub'><a>Balcão</a>
+                        <ul>
+                            <li><a href="/Smarttoll/Caixa/Cadastro">Cadastro</a></li>
+                            <li><a href="/Smarttoll/Caixa/Consulta">Consulta</a></li>	
+                        </ul>
+                        </li>
+
+                        <li class='has-sub'><a>Empresa</a>
+                        <ul>
+                            <li><a href="/Smarttoll/Empresa/Cadastro">Cadastro</a></li>	
+                            <li><a href="/Smarttoll/Empresa/Consulta">Consulta</a></li>
+                        </ul>
+                        </li>
+
+                        <li class='has-sub'><a>Funcionários</a>
+                        <ul>
+                            <li><a href="/Smarttoll/Funcionario/cadastroFuncionario.jsp">Cadastro</a></li>
+                            <li><a href="/Smarttoll/Funcionario/consultaFuncionario.jsp">Consulta</a></li>	
+                        </ul>
+                        </li>
+                    </ul>
 		</li> 
 	
 		<li class="active has-sub">
@@ -49,26 +49,31 @@
 				<li><a>Boletos</a></li>
 				
 		   	   	<li class='has-sub'><a>Estados</a>
-		   	   		<ul>
-		   	   			<a href="/Smarttoll/view/cadastros/relacionamentos/Estados/cadastro.php">Cadastro</a>
-		   	   			<a href="/Smarttoll/view/cadastros/relacionamentos/Estados/consulta.php">Consulta</a>
-		   	  		</ul>
+                                    <ul>
+                                        <a href="/Smarttoll/Estado/Cadastro">Cadastro</a>
+                                        <a href="/Smarttoll/Estado/Consulta">Consulta</a>
+                                    </ul>
 		   	  	</li>
 		   	  	
-		   	  	<li><a href="/Smarttoll/view/cadastros/relacionamentos/Isentos/cadastro.php">Isentos</a></li>
+		   	  	<li class='has-sub'><a>Isentos</a>
+                                    <ul>
+                                        <a href="/Smarttoll/Isento/Cadastro">Cadastro</a>
+                                        <a href="/Smarttoll/Isento/Consulta">Consulta</a>
+                                    </ul>
+		   	  	</li>
 		   	  	
 		   	  	<li class='has-sub'><a>Municipios</a>
-		   	  		<ul>
-		   	  			<a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/cadastro.php">Cadastro</a>
-		   	   			<a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/consulta.php">Consulta</a>
-		   	  		</ul>
+                                    <ul>
+                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/cadastro.php">Cadastro</a>
+                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/consulta.php">Consulta</a>
+                                    </ul>
 		   	  	</li>
 		   	  	
 		   	 	<li class='has-sub'><a>Classificações do Pedágio</a>
-		   	 		<ul>
-		   	 			<a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/cadastro.php">Cadastro</a>
-		   	   			<a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/consulta.php">Consulta</a>
-		   	 		</ul>
+                                    <ul>
+                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/cadastro.php">Cadastro</a>
+                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/consulta.php">Consulta</a>
+                                    </ul>
 		   	 	</li>	
 		   	</ul>	
 		</li>

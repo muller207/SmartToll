@@ -62,6 +62,18 @@ public class EmpresaDAOImp implements EmpresaDAO {
     }
     
     @Override
+    public ResultSet consultaEmpresa(String condicao) {
+        String sql = CONSULTA_EMPRESA + condicao;
+        try {
+            PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
+            return psmt.executeQuery();            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+    @Override
     public ResultSet consultaEmpresaTotal(){
         ResultSet rs = null;
         try {
