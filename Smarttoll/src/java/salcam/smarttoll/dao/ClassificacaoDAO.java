@@ -16,12 +16,14 @@ import salcam.smarttoll.beans.Classificacao;
 public interface ClassificacaoDAO {
     
     public final String CADASTRA_CLASSIFICACAO = "INSERT INTO "
-            + "Classificacoes(CLASSIFICACAO, DESCRICAO, TARIFA, EIXOS, SITUACAO, EIXOS_COMERICAL, SEMPARAR)"
+            + "Classificacoes(CLASSIFICACAO, DESCRICAO, TARIFA, EIXOS, SITUACAO, EIXOS_COMERCIAL, SEMPARAR)"
             + "VALUES(?,?,?,?,?,?,?)";
-    public String CONSULTA_CLASSIFICACAO = "SELECT * FROM CLassificacoes";
+    public String CONSULTA_CLASSIFICACAO = "SELECT * FROM Classificacoes";
 
     boolean cadastroClassificacao(Classificacao c);
 
     ResultSet consultaClassificacaoTotal();
+
+    ResultSet consultaClassificacao(String condicao);
     
 }

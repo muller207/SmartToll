@@ -31,6 +31,18 @@ public class ClassificacaoDAOImp implements ClassificacaoDAO {
     }
     
     @Override
+    public ResultSet consultaClassificacao(String condicao){
+        ResultSet rs = null;
+        try {
+            PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CONSULTA_CLASSIFICACAO+condicao);
+            rs = stmt.executeQuery();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return rs;
+    }
+    
+    @Override
     public boolean cadastroClassificacao(Classificacao c){
         try{
             PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CADASTRA_CLASSIFICACAO);
@@ -44,7 +56,7 @@ public class ClassificacaoDAOImp implements ClassificacaoDAO {
             stmt.executeUpdate();
             return true;
         }
-        catch(Exception ex){
+        catch(SQLException ex){
             System.out.println(ex.getMessage());
             return false;
         }

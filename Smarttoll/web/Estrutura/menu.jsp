@@ -44,9 +44,9 @@
 		</li> 
 	
 		<li class="active has-sub">
-		  	<a>Relacionamentos</a>
+                    <a href="#">Relacionamentos</a>
 		   	<ul>
-				<li><a>Boletos</a></li>
+                            <li><a href="#">Boletos</a></li>
 				
 		   	   	<li class='has-sub'><a>Estados</a>
                                     <ul>
@@ -64,15 +64,15 @@
 		   	  	
 		   	  	<li class='has-sub'><a>Municipios</a>
                                     <ul>
-                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/cadastro.php">Cadastro</a>
-                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Municipios/consulta.php">Consulta</a>
+                                        <a href="/Smarttoll/Municipio/Cadastro">Cadastro</a>
+                                        <a href="/Smarttoll/Municipio/Consulta">Consulta</a>
                                     </ul>
 		   	  	</li>
 		   	  	
 		   	 	<li class='has-sub'><a>Classificações do Pedágio</a>
                                     <ul>
-                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/cadastro.php">Cadastro</a>
-                                        <a href="/Smarttoll/view/cadastros/relacionamentos/Classificacoes/consulta.php">Consulta</a>
+                                        <a href="/Smarttoll/Classificacao/Cadastro">Cadastro</a>
+                                        <a href="/Smarttoll/Classificacao/Consulta">Consulta</a>
                                     </ul>
 		   	 	</li>	
 		   	</ul>	
@@ -121,8 +121,8 @@
 	   		<a>Ajuda</a>
 	   		<ul>
 	   	   		<li><a  href="/Smarttoll/Estrutura/template.jsp">Informações do Sistema</a></li>
-	   	   		<li><a onClick="chaveRegistro()">Registro</a></li>
-	   	   		<li><a>Verificar Alertas</a></li>
+                                <li><a href="#">Registro</a></li>
+                                <li><a href="#">Verificar Alertas</a></li>
 	   		</ul>
 		</li>
                 

@@ -9,6 +9,22 @@
         <jsp-file>/Caixa/consultaCaixa.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>cadastroMunicipio.jsp</servlet-name>
+        <jsp-file>/Municipio/cadastroMunicipio.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaMunicipio.jsp</servlet-name>
+        <jsp-file>/Municipio/consultaMunicipio.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>cadastroClassificacao.jsp</servlet-name>
+        <jsp-file>/Classificacao/cadastroClassificacao.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaClassificacao.jsp</servlet-name>
+        <jsp-file>/Classificacao/consultaClassificacao.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>cadastroIsento.jsp</servlet-name>
         <jsp-file>/Isento/cadastroIsento.jsp</jsp-file>
     </servlet>
@@ -48,6 +64,22 @@
         <servlet-name>CadastroIsento</servlet-name>
         <servlet-class>salcam.smarttoll.servlet.CadastroIsento</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastroClassificacao</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastroClassificacao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaClassificacao</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaClassificacao</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaMunicipio</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaMunicipio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroMunicipio</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastroMunicipio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>cadastroCaixa.jsp</servlet-name>
         <url-pattern>/Caixa/Cadastro</url-pattern>
@@ -71,6 +103,22 @@
     <servlet-mapping>
         <servlet-name>consultaIsento.jsp</servlet-name>
         <url-pattern>/Isento/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cadastroClassificacao.jsp</servlet-name>
+        <url-pattern>/Classificacao/Cadastro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaClassificacao.jsp</servlet-name>
+        <url-pattern>/Classificacao/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cadastroMunicipio.jsp</servlet-name>
+        <url-pattern>/Municipio/Cadastro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaMunicipio.jsp</servlet-name>
+        <url-pattern>/Municipio/Consulta</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>cadastroIsento.jsp</servlet-name>
@@ -199,6 +247,22 @@
     <servlet-mapping>
         <servlet-name>CadastroIsento</servlet-name>
         <url-pattern>/Isento/CadastroIsento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroClassificacao</servlet-name>
+        <url-pattern>/Classificacao/CadastroClassificacao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaClassificacao</servlet-name>
+        <url-pattern>/Classificacao/ConsultaClassificacao</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaMunicipio</servlet-name>
+        <url-pattern>/Municipio/ConsultaMunicipio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroMunicipio</servlet-name>
+        <url-pattern>/Municipio/CadastroMunicipio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

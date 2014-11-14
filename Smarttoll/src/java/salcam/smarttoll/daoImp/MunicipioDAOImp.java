@@ -21,33 +21,16 @@ public class MunicipioDAOImp implements MunicipioDAO {
     public boolean cadastroMunicipio(Municipio c){
         try{
             PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CADASTRO_MUNICIPIO); 
-            if(maxCodigo()==-1)
-                throw new Exception();
-            stmt.setInt(1, maxCodigo()+1);
-            stmt.setString(2, c.getMunicipio());
-            stmt.setString(3, c.getEstadoCod());
+            stmt.setString(1, c.getMunicipio());
+            stmt.setString(2, c.getEstadoCod());
             stmt.executeUpdate();
             return true;
         }
-        catch(Exception ex){
+        catch(SQLException ex){
             System.out.println(ex.getMessage());
             return false;
         }
     }    
-    
-    @Override
-    public int maxCodigo(){
-        try{
-            PreparedStatement stmt = Conn.getConn().prepareStatement(MAX_CODIGO_MUNICIPIO);
-            ResultSet rs = stmt.executeQuery();
-            if(rs.next()){
-                return rs.getInt("MAX");                
-            }
-            return -1;
-        }catch(Exception e){
-            return -1;
-        }
-    }
     
     @Override
     public ResultSet consultaMunicipio(String condicao) {
