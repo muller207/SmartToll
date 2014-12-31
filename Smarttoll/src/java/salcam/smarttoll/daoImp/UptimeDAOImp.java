@@ -5,8 +5,10 @@
  */
 package salcam.smarttoll.daoImp;
 
+import salcam.smarttoll.dao.UptimeDAO;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import salcam.smarttoll.beans.Uptime;
 import salcam.smarttoll.conn.Conn;
@@ -15,7 +17,8 @@ import salcam.smarttoll.conn.Conn;
  *
  * @author Samuel
  */
-public class UptimeDAOImp {
+public class UptimeDAOImp implements UptimeDAO {
+    @Override
     public boolean cadastroUptime(Uptime u){
         final String CADASTRO_UPTIME = "INSERT INTO Uptime"
                 + "(CAIXA_CODIGO, FUNCIONARIO_CODIGO, DATA_INICIO, ULTIMO_REGISTRO, SITUACAO, TRANSMITIDO)"
@@ -34,6 +37,29 @@ public class UptimeDAOImp {
         catch(SQLException e){
             System.out.println(e.getMessage());
             return false;
+        }
+    }
+    
+    @Override
+    public ResultSet consultaUptimeEspecial(String sql) {
+        try {
+            PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
+            return psmt.executeQuery();            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+    @Override
+    public ResultSet consultaUptime(String condicao) {
+        String sql = CONSULTA_UPTIME + condicao +" ORDER BY DATA_INICIO";
+        try {
+            PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
+            return psmt.executeQuery();            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
         }
     }
 }

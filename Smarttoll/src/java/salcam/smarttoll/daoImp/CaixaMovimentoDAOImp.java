@@ -58,6 +58,18 @@ public class CaixaMovimentoDAOImp implements CaixaMovimentoDAO {
     } 
     
     @Override
+    public ResultSet consultaCaixaMovimentoEspecial(String sql) {
+        try {
+            PreparedStatement psmt = Conn.getConn().prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE,
+                   ResultSet.CONCUR_UPDATABLE);
+            return psmt.executeQuery();            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+    @Override
     public ResultSet consultaCaixaMovimentoTotal(){
         ResultSet rs = null;
         try {

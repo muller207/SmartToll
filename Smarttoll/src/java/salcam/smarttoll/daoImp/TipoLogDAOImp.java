@@ -5,11 +5,12 @@
  */
 package salcam.smarttoll.daoImp;
 
-import salcam.smarttoll.dao.TipoLogDAO;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import salcam.smarttoll.beans.TipoLog;
 import salcam.smarttoll.conn.Conn;
+import salcam.smarttoll.dao.TipoLogDAO;
 
 /*
  *
@@ -30,4 +31,15 @@ public class TipoLogDAOImp implements TipoLogDAO {
             return false;
         }
     }
+    @Override
+    public ResultSet consultaTipoLogTotal(){
+        ResultSet rs = null;
+        try {
+            PreparedStatement stmt = (PreparedStatement) Conn.getConn().prepareStatement(CONSULTA_TIPO_LOG);
+            rs = stmt.executeQuery();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return rs;
+    } 
 }

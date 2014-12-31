@@ -15,10 +15,10 @@ import salcam.smarttoll.beans.ReimpressaoJustificativa;
  */
 public interface ReimpressaoJustificativaDAO {
     
-    public final String CADASTRO_REIMPRESSAO_JUSTIFICATIVA="INSERT INTO Reimpressao_Justificativas"
+    public final String CADASTRO_REIMPRESSAO_JUSTIFICATIVA="INSERT INTO Reimpressao_Justificativa"
             + "(JUSTIFICATIVA_CODIGO,DESCRICAO) VALUES(?,?)";
-    public final String MAX_CODIGO_REIMPRESSAO_JUSTIFICATIVA="SELECT MAX(JUSTIFICATIVA_CODIGO) as MAX FROM Reimpressao_Justificativas";
-    public String CONSULTA_REIMPRESSAO_JUSTIFICATIVA="SELECT * FROM Reimpressao_Justificativas";
+    public final String MAX_CODIGO_REIMPRESSAO_JUSTIFICATIVA="SELECT MAX(JUSTIFICATIVA_CODIGO) as MAX FROM Reimpressao_Justificativa";
+    public String CONSULTA_REIMPRESSAO_JUSTIFICATIVA="SELECT * FROM Reimpressao_Justificativa";
 
     boolean cadastroReimpressaoJustificativa(ReimpressaoJustificativa r);
 

@@ -20,7 +20,7 @@ import salcam.smarttoll.conn.Conn;
  */
 public class LogReimpressaoDAOImp implements LogReimpressaoDAO {
     @Override
-    public boolean cadastroLog(LogReimpressao l) {
+    public boolean cadastroLogReimpressao(LogReimpressao l) {
         try {
             PreparedStatement psmt = Conn.getConn().prepareStatement(CADASTRO_LOG_REIMPRESSAO);
             psmt.setDate(1, (Date) l.getData());
@@ -44,8 +44,8 @@ public class LogReimpressaoDAOImp implements LogReimpressaoDAO {
     }
 
     @Override
-    public ResultSet consultaCaixa(String condicao) {
-        String sql = CONSULTA_LOG_REIMPRESSAO + condicao;
+    public ResultSet consultaLogReimpressao(String condicao) {
+        String sql = CONSULTA_LOG_REIMPRESSAO + condicao + " ORDER BY l.DATA DESC";
         try {
             PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
             return psmt.executeQuery();            

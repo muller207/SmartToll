@@ -39,6 +39,9 @@ body
 	
  }
 
+ h1 {
+     display: inline-block;
+ }
 #wrap
  {
   min-height: 93%;
@@ -72,9 +75,10 @@ body
 #footer
  { 
 	width: 100%;
-	padding: 3px 30px 3px 30px;
+	padding: 3px 30px 3px 3px;
 	background-color: #3f3f3f;
 	color: #ffffff;
+        height: 60px;
  }
 
 a{text-decoration: none;}
@@ -83,18 +87,26 @@ li{list-style: none;}
 
 img{text-align: center;}
 
+table{
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+}
+
 label
  {
 	display: inline-block;
 	width: 100px;
+        white-space: nowrap;
  }
  
  fieldset
  {
  	display: inline-block;
- 	width: 500px;
+ 	width: 50%;
  	padding: 10px;
  	border-color:#e1e1e1;
+        padding-bottom: 20px;        
  }
  
  fieldset legend
@@ -326,3 +338,15 @@ input[type="radio"],input[type="checkbox"]
 #menu ul ul a:hover {color: #ffffff;}
 
 #menu > ul > li.has-sub > a:hover:before {border-top: 5px solid #ffffff;}
+
+#esquerda { 
+    width:50%; 
+    float:left; 
+}
+#direita { 
+    width:50%; 
+    float:right; 
+}
+.clearfix { 
+    clear:both; 
+}

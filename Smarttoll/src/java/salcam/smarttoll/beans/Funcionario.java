@@ -5,7 +5,7 @@
  */
 package salcam.smarttoll.beans;
 
-import java.sql.Connection;
+import java.sql.Blob;
 import java.util.Date;
 
 /**
@@ -27,14 +27,15 @@ public class Funcionario {
     private String senha;
     private String senhaAdministrativa;
     private byte funcaoCodigo;
-    private Date horaEntrada1;
-    private Date horaSaida1;
-    private Date horaEntrada2;
-    private Date horaSaida3;
+    private String horaEntrada1;
+    private String horaSaida1;
+    private String horaEntrada2;
+    private String horaSaida2;
     private String habilitacao;
-    private char categoria;
+    private String categoria;
     private Date emissao;
     private Date validade;
+    private String imagem;
 
     public Funcionario() {
 
@@ -144,36 +145,36 @@ public class Funcionario {
         this.funcaoCodigo = funcaoCodigo;
     }
 
-    public Date getHoraEntrada1() {
+    public String getHoraEntrada1() {
         return horaEntrada1;
     }
 
-    public void setHoraEntrada1(Date horaEntrada1) {
+    public void setHoraEntrada1(String horaEntrada1) {
         this.horaEntrada1 = horaEntrada1;
     }
 
-    public Date getHoraSaida1() {
+    public String getHoraSaida1() {
         return horaSaida1;
     }
 
-    public void setHoraSaida1(Date horaSaida1) {
+    public void setHoraSaida1(String horaSaida1) {
         this.horaSaida1 = horaSaida1;
     }
 
-    public Date getHoraEntrada2() {
+    public String getHoraEntrada2() {
         return horaEntrada2;
     }
 
-    public void setHoraEntrada2(Date horaEntrada2) {
+    public void setHoraEntrada2(String horaEntrada2) {
         this.horaEntrada2 = horaEntrada2;
     }
 
-    public Date getHoraSaida3() {
-        return horaSaida3;
+    public String getHoraSaida2() {
+        return horaSaida2;
     }
 
-    public void setHoraSaida3(Date horaSaida3) {
-        this.horaSaida3 = horaSaida3;
+    public void setHoraSaida2(String horaSaida2) {
+        this.horaSaida2 = horaSaida2;
     }
 
     public String getHabilitacao() {
@@ -184,11 +185,11 @@ public class Funcionario {
         this.habilitacao = habilitacao;
     }
 
-    public char getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(char categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
@@ -208,4 +209,12 @@ public class Funcionario {
         this.validade = validade;
     }
 
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
+    
 }

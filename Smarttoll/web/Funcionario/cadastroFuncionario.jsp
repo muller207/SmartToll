@@ -33,17 +33,17 @@
                 <h1>Cadastro de Funcionário</h1><br><br>  
                     <form action="CadastroFuncionario" method="post">
                         <label>Nome</label>
-                        <input type="text" name="nome"><br><br>
+                        <input type="text" name="nome" required><br><br>
                         <label>Apelido</label> 
-                        <input type="text" name="apelido"><br><br>
+                        <input type="text" name="apelido" required><br><br>
                         <label>Situação</label>
-                        <select name="situacao">
+                        <select name="situacao" required>
                             <option value="">Não preenchido</option>
                             <option value="1">Ativo</option>
                             <option value="2">Suspenso</option>
                         </select><br><br>
                         <label>Função</label>
-                        <select name="funcao">
+                        <select name="funcao" required>
                             <option value="">Não preenchido</option>
                             <%
                                 FuncaoDAOImp fdao = new FuncaoDAOImp();
@@ -59,13 +59,13 @@
                             %>
                         </select><br><br>
                         <label>Usuário</label>
-                        <input type="text" name="usuario"><br><br>
+                        <input type="text" name="usuario" required><br><br>
                         <label>CPF</label> 
-                        <input type="text" name="cpf"><br><br>
+                        <input type="text" name="cpf" required><br><br>
                         <label>RG</label> 
-                        <input type="text" name="rg"><br><br>
+                        <input type="text" name="rg" required><br><br>
                         <label>Empresa</label>
-                        <select name="empresa">
+                        <select name="empresa" required>
                             <option value="">Não preenchido</option>
                             <%
                                 EmpresaDAOImp edao = new EmpresaDAOImp();
@@ -80,20 +80,20 @@
                             %>
                         </select><br><br>
                         <label>Admissao</label> 
-                        <input type="date" name="admissao"><br><br>
+                        <input type="date" name="admissao" required><br><br>
                         <fieldset>
                             <legend>Senha Login</legend>
                             <label>Senha</label> 
-                            <input type="password" name="senhaLogin" placeholder="Senha"><br><br>
+                            <input type="password" name="senhaLogin" placeholder="Senha" required><br><br>
                             <label>Confirmação senha</label> 
-                            <input type="password" name="confirmacaoSenhaLogin" placeholder="confirmação">
+                            <input type="password" name="confirmacaoSenhaLogin" placeholder="confirmação" required>
                         </fieldset><br><br>
                         <fieldset>
                             <legend>Senha administrativa</legend>
                             <label>Senha</label> 
-                            <input type="password" name="senhaLoginAdministrativa" placeholder="Senha"><br><br>
+                            <input type="password" name="senhaLoginAdministrativa" placeholder="Senha" required><br><br>
                             <label>Confirmação senha</label> 
-                            <input type="password" name="senhaLoginAdministrativa" placeholder="confirmação">
+                            <input type="password" name="senhaLoginAdministrativa" placeholder="confirmação" required>
                         </fieldset><br><br>
 
                         <fieldset id="fieldHorarios">
@@ -122,7 +122,7 @@
                             <br><br>
 
                             <label for="categoria">Categoria</label>
-                            <input type="number" id="categoria" name="categoria" placeholder="Categoria"/>
+                            <input type="text" id="categoria" name="categoria" placeholder="Categoria"/>
                             <br><br>
 
                             <label for="emissao">Emissao</label>
@@ -134,6 +134,7 @@
                             <br><br>
 
                         </fieldset><br><br>
+                        <input type="file" name="foto" id="foto"><br><br><br><br>
                         <input type="submit" value="Registrar">
                     </form>
             </div>

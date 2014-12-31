@@ -40,7 +40,7 @@ public class LogDAOImp implements LogDAO {
 
     @Override
     public ResultSet consultaLog(String condicao) {
-        String sql = CONSULTA_LOG + condicao;
+        String sql = CONSULTA_LOG + condicao + " ORDER BY l.DATA DESC";
         try {
             PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
             return psmt.executeQuery();            

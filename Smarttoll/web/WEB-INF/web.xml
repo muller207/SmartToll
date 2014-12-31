@@ -13,8 +13,60 @@
         <jsp-file>/Municipio/cadastroMunicipio.jsp</jsp-file>
     </servlet>
     <servlet>
+        <servlet-name>consultaRelatorioMovimentacaoCaixa.jsp</servlet-name>
+        <jsp-file>/Relatorio/MovimentacaoCaixa/consultaRelatorioMovimentacaoCaixa.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioDiscrepanciaEixos.jsp</servlet-name>
+        <jsp-file>/Relatorio/DiscrepanciaEixos/consultaRelatorioDiscrepanciaEixos.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioFuncionamentoSistema.jsp</servlet-name>
+        <jsp-file>/Relatorio/FuncionamentoSistema/consultaRelatorioFuncionamentoSistema.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioMovimentacaoPistaIsenta.jsp</servlet-name>
+        <jsp-file>/Relatorio/MovimentacaoPistaIsenta/consultaRelatorioMovimentacaoPistaIsenta.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioMovimentacaoVeiculos.jsp</servlet-name>
+        <jsp-file>/Relatorio/MovimentacaoVeiculos/consultaRelatorioMovimentacaoVeiculos.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioPrevisaoValePedagio.jsp</servlet-name>
+        <jsp-file>/Relatorio/PrevisaoValePedagio/consultaRelatorioPrevisaoValePedagio.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioRealizadoValePedagio.jsp</servlet-name>
+        <jsp-file>/Relatorio/RealizadoValePedagio/consultaRelatorioRealizadoValePedagio.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaRelatorioSemParar.jsp</servlet-name>
+        <jsp-file>/Relatorio/SemParar/consultaRelatorioSemParar.jsp</jsp-file>
+    </servlet>
+    <servlet>
         <servlet-name>consultaMunicipio.jsp</servlet-name>
         <jsp-file>/Municipio/consultaMunicipio.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaLogVisualizacaoRelatorios.jsp</servlet-name>
+        <jsp-file>/Log/VisualizacaoRelatorios/consultaLogVisualizacaoRelatorios.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaLogSistema.jsp</servlet-name>
+        <jsp-file>/Log/Sistema/consultaLogSistema.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaLogReimpressaoRecibos.jsp</servlet-name>
+        <jsp-file>/Log/ReimpressaoRecibos/consultaLogReimpressaoRecibos.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>consultaGrupoControleAcesso.jsp</servlet-name>
+        <jsp-file>/Ferramentas/GrupoControleAcesso/consultaGrupoControleAcesso.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>cadastraGrupoControleAcesso.jsp</servlet-name>
+        <jsp-file>/Ferramentas/GrupoControleAcesso/cadastraGrupoControleAcesso.jsp</jsp-file>
     </servlet>
     <servlet>
         <servlet-name>cadastroClassificacao.jsp</servlet-name>
@@ -79,6 +131,86 @@
     <servlet>
         <servlet-name>CadastroMunicipio</servlet-name>
         <servlet-class>salcam.smarttoll.servlet.CadastroMunicipio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaFuncionario</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaRelatorioMovimentacaoCaixa</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaRelatorioMovimentacaoCaixa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImprimirRelatorioMovimentacaoCaixa</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ImprimirRelatorioMovimentacaoCaixa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaRelatorioMovimentacaoVeiculos</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaRelatorioMovimentacaoVeiculos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaRelatorioDiscrepanciaEixos</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaRelatorioDiscrepanciaEixos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaRelatorioFuncionamentoSistema</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaRelatorioFuncionamentoSistema</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlteracaoFechamentoCaixa</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.AlteracaoFechamentoCaixa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaLogSistema</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaLogSistema</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaLogReimpressaoRecibos</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaLogReimpressaoRecibos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaLogRelatorio</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaLogRelatorio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastroFuncionario</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastroFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>servlet</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>servletTeste</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.servletTeste</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaGrupoControleAcesso</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaGrupoControleAcesso</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdicionaItem</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.AdicionaItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoverItem</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.RemoverItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastraGrupoControleAcesso</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.CadastraGrupoControleAcesso</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarItem</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.AlterarItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaRelatorioMovimentacaoPistaIsenta</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.ConsultaRelatorioMovimentacaoPistaIsenta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlteraParametrosSistema</servlet-name>
+        <servlet-class>salcam.smarttoll.servlet.AlteraParametrosSistema</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>cadastroCaixa.jsp</servlet-name>
@@ -145,8 +277,60 @@
         <url-pattern>/Banco/Cadastro</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>consultaRelatorioMovimentacaoCaixa.jsp</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoCaixa/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioDiscrepanciaEixos.jsp</servlet-name>
+        <url-pattern>/Relatorio/DiscrepanciaEixos/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioFuncionamentoSistema.jsp</servlet-name>
+        <url-pattern>/Relatorio/FuncionamentoSistema/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioMovimentacaoPistaIsenta.jsp</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoPistaIsenta/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioMovimentacaoVeiculos.jsp</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoVeiculos/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioPrevisaoValePedagio.jsp</servlet-name>
+        <url-pattern>/Relatorio/PrevisaoValePedagio/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioRealizadoValePedagio.jsp</servlet-name>
+        <url-pattern>/Relatorio/RealizadoValePedagio/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaRelatorioSemParar.jsp</servlet-name>
+        <url-pattern>/Relatorio/SemParar/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>consultaLogAcesso.jsp</servlet-name>
         <url-pattern>/Log/Acesso/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaLogVisualizacaoRelatorios.jsp</servlet-name>
+        <url-pattern>/Log/VisualizacaoRelatorios/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaLogSistema.jsp</servlet-name>
+        <url-pattern>/Log/Sistema/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaLogReimpressaoRecibos.jsp</servlet-name>
+        <url-pattern>/Log/ReimpressaoRecibos/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>consultaGrupoControleAcesso.jsp</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/Consulta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cadastraGrupoControleAcesso.jsp</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/Cadastro</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>home.jsp</servlet-name>
@@ -263,6 +447,86 @@
     <servlet-mapping>
         <servlet-name>CadastroMunicipio</servlet-name>
         <url-pattern>/Municipio/CadastroMunicipio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaFuncionario</servlet-name>
+        <url-pattern>/ConsultaFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaRelatorioMovimentacaoCaixa</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoCaixa/ConsultaRelatorioMovimentacaoCaixa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImprimirRelatorioMovimentacaoCaixa</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoCaixa/ImprimirRelatorioMovimentacaoCaixa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaRelatorioMovimentacaoVeiculos</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoVeiculos/ConsultaRelatorioMovimentacaoVeiculos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaRelatorioDiscrepanciaEixos</servlet-name>
+        <url-pattern>/Relatorio/DiscrepanciaEixos/ConsultaRelatorioDiscrepanciaEixos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaRelatorioFuncionamentoSistema</servlet-name>
+        <url-pattern>/Relatorio/FuncionamentoSistema/ConsultaRelatorioFuncionamentoSistema</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlteracaoFechamentoCaixa</servlet-name>
+        <url-pattern>/Ferramentas/FechamentoCaixas/AlteracaoFechamentoCaixa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaLogSistema</servlet-name>
+        <url-pattern>/Log/Sistema/ConsultaLogSistema</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaLogReimpressaoRecibos</servlet-name>
+        <url-pattern>/Log/ReimpressaoRecibos/ConsultaLogReimpressaoRecibos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaLogRelatorio</servlet-name>
+        <url-pattern>/Log/VisualizacaoRelatorios/ConsultaLogRelatorio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroFuncionario</servlet-name>
+        <url-pattern>/Funcionario/CadastroFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/Estrutura/servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servletTeste</servlet-name>
+        <url-pattern>/servletTeste</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaGrupoControleAcesso</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/ConsultaGrupoControleAcesso</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdicionaItem</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/AdicionaItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoverItem</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/RemoverItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastraGrupoControleAcesso</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/CadastraGrupoControleAcesso</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarItem</servlet-name>
+        <url-pattern>/Ferramentas/GrupoControleAcesso/AlterarItem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaRelatorioMovimentacaoPistaIsenta</servlet-name>
+        <url-pattern>/Relatorio/MovimentacaoPistaIsenta/ConsultaRelatorioMovimentacaoPistaIsenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlteraParametrosSistema</servlet-name>
+        <url-pattern>/Parametros/AlteraParametrosSistema</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

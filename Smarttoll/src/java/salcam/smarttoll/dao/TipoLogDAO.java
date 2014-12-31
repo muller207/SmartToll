@@ -5,6 +5,7 @@
  */
 package salcam.smarttoll.dao;
 
+import java.sql.ResultSet;
 import salcam.smarttoll.beans.TipoLog;
 
 /**
@@ -13,6 +14,7 @@ import salcam.smarttoll.beans.TipoLog;
  */
 public interface TipoLogDAO {
     final String CADASTRO_TIPO_LOG = "INSERT INTO Tipos_Logs(DESCRICAO, MODULO) VALUES(?,?);";
+    String CONSULTA_TIPO_LOG = "SELECT * FROM TIPOS_LOGS";
     boolean cadastroTipoLog(TipoLog tl);
-    
+    ResultSet consultaTipoLogTotal();
 }

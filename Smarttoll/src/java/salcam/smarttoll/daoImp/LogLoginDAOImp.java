@@ -7,10 +7,10 @@
 package salcam.smarttoll.daoImp;
 
 import salcam.smarttoll.dao.LogLoginDAO;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import salcam.smarttoll.beans.LogLogin;
 import salcam.smarttoll.conn.Conn;
 
@@ -25,7 +25,7 @@ public class LogLoginDAOImp implements LogLoginDAO {
             PreparedStatement psmt = Conn.getConn().prepareStatement(CADASTRO_LOG_LOGIN);
             psmt.setInt(1, l.getFuncionarioCod());
             psmt.setInt(2, l.getCondominioCod());
-            psmt.setDate(3, (Date) l.getData());
+            psmt.setTimestamp(3, new Timestamp(l.getData().getTime()));
             psmt.setByte(4, l.getSucesso());
             psmt.setByte(5, l.getSistema());
             psmt.setString(6, l.getIp());
@@ -40,7 +40,7 @@ public class LogLoginDAOImp implements LogLoginDAO {
 
     @Override
     public ResultSet consultaLogLogin(String condicao) {
-        String sql = CONSULTA_LOG_LOGIN + condicao;
+        String sql = CONSULTA_LOG_LOGIN + condicao + " ORDER BY l.DATA DESC";
         try {
             PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
             return psmt.executeQuery();            
@@ -52,7 +52,7 @@ public class LogLoginDAOImp implements LogLoginDAO {
     
     @Override
     public ResultSet consulta(String condicao){
-        String sql = CONSULTA + condicao;
+        String sql = CONSULTA + condicao + " ORDER BY l.DATA DESC";
         try {
             PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
             return psmt.executeQuery();            

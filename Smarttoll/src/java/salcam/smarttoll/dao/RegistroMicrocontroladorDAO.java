@@ -26,4 +26,6 @@ public interface RegistroMicrocontroladorDAO {
 
     ResultSet consultaRegistroMicroncontroladorTotal();
     
+    ResultSet consultaRegistroMicroncontroladorEspecial(String sql);
+    
 }

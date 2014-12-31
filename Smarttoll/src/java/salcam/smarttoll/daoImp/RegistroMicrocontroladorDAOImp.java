@@ -63,4 +63,15 @@ public class RegistroMicrocontroladorDAOImp implements RegistroMicrocontroladorD
         }
         return rs;
     }      
+    
+    @Override
+    public ResultSet consultaRegistroMicroncontroladorEspecial(String sql) {
+        try {
+            PreparedStatement psmt = Conn.getConn().prepareStatement(sql);
+            return psmt.executeQuery();            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
 }

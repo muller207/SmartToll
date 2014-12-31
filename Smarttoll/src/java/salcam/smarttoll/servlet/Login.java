@@ -7,14 +7,21 @@ package salcam.smarttoll.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import net.sourceforge.jtds.jdbc.DateTime;
+import salcam.smarttoll.beans.LogLogin;
 import salcam.smarttoll.conn.Conn;
+import salcam.smarttoll.dao.LogLoginDAO;
 import salcam.smarttoll.daoImp.FuncionarioDAOImp;
+import salcam.smarttoll.daoImp.LogLoginDAOImp;
 import salcam.smarttoll.utils.Alert;
 
 /**
@@ -84,12 +91,25 @@ public class Login extends HttpServlet {
         }
         
         
+        
         FuncionarioDAOImp fdao = new FuncionarioDAOImp();
-        if (fdao.consultaFuncionarioLogin(usuario, codifica(senha))) {
+        int funcionarioCod = fdao.consultaFuncionarioLogin(usuario, codifica(senha));
+        if (funcionarioCod!=-1) {
+            LogLogin l = new LogLogin();
+            l.setFuncionarioCod(funcionarioCod);
+            l.setCondominioCod(1);
+            InetAddress conf = InetAddress.getLocalHost();
+            l.setIp(conf.getHostAddress());
+            l.setEstacao(conf.getHostName().toUpperCase());
+            l.setSistema((byte)1);
+            l.setData(new Date());          
+            l.setSucesso((byte)1);
+            LogLoginDAO ldao = new LogLoginDAOImp();
+            ldao.cadastroLogLogin(l);
             session.setAttribute("usuario", usuario);
+            session.setAttribute("usuario_cod", funcionarioCod);
             response.sendRedirect("home");
             //response.sendRedirect("Caixa/cadastroCaixa.jsp");
-
         } else {
             session.invalidate();
             Alert.Message(response, "LOGIN/SENHA INCORRETO(S)");
@@ -99,15 +119,22 @@ public class Login extends HttpServlet {
     }
 
     private String codifica(String pass) {
-        String mascara = "#$%^%*@" + (char) 13 + (char) 12;
+        String mascara = "#$%$^%*@" + (char) 13 + (char) 12;
+        int aux = 13;
         String cAux = "";
         int ponM = 0;
         pass = pass.replace("''", "'");
         for (int ponS = 0; ponS < pass.length(); ponS++) {
-            cAux += (char) ((int) pass.charAt(ponS) ^ ((int) mascara.charAt(ponM)));
+            if(ponM<=7)
+                cAux += (char) ((int) pass.charAt(ponS) ^ ((int) mascara.charAt(ponM)));
+            else{
+                cAux += (char) ((int) pass.charAt(ponS) ^ (aux));
+                aux--;
+            }
             ponM++;
-            if (ponM > mascara.length()) {
+            if (ponM > mascara.length()-1) {
                 ponM = 0;
+                aux = 13;
             }
         }
         cAux = cAux.replace("'", "''");

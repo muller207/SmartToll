@@ -22,6 +22,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="/Smarttoll/css/style.css">
+        <script src="/Smarttoll/js/jquery-1.7.2.min.js" type="text/javascript" language="javascript"></script>
+        <script src="/Smarttoll/js/mudaPeriodo.js" language="javascript" type="text/javascript"></script>
         <title>Log de Acesso</title>
     </head>
     <body>
